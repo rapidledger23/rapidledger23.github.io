@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>人人视频官网-人人视频网页版在线观看_人人视频官方客户端下载</title>
+<meta name="description" content="人人视频官网首页，了解人人视频网页版在线观看入口、官方客户端下载方式与频道内容说明，帮助新用户快速找到人人视频官网的正确访问路径。">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111827'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23f97316' stroke-width='4'/%3E%3Cpath d='M27 24l14 8-14 8z' fill='%23f97316'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#111827;
+  --ink-2:#374151;
+  --muted:#6b7280;
+  --line:#e5e7eb;
+  --bg:#f8fafc;
+  --card:#ffffff;
+  --brand:#f97316;
+  --brand-dark:#ea580c;
+  --navy:#0f172a;
+  --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+img,svg{display:block;max-width:100%;}
+.wrap{width:min(1140px,92vw);margin:0 auto;}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+
+/* header */
+header.site{
+  position:sticky;top:0;z-index:50;
+  background:rgba(248,250,252,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.head-inner{display:flex;align-items:center;gap:24px;padding:14px 0;}
+.logo{display:flex;align-items:center;gap:10px;flex:0 0 auto;}
+.logo-mark{
+  width:38px;height:38px;border-radius:11px;
+  background:var(--navy);
+  display:grid;place-items:center;
+}
+.logo-text{font-weight:800;font-size:17px;letter-spacing:.2px;white-space:nowrap;}
+nav.main{display:flex;gap:22px;margin-left:auto;font-size:15px;color:var(--ink-2);}
+nav.main a{padding:4px 0;border-bottom:2px solid transparent;transition:.2s;}
+nav.main a:hover{color:var(--brand-dark);border-color:var(--brand);}
+.head-cta{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--brand);color:#fff;font-weight:600;font-size:14px;
+  padding:9px 18px;border-radius:999px;white-space:nowrap;
+  transition:.2s;
+}
+.head-cta:hover{background:var(--brand-dark);}
+.menu-toggle{display:none;background:none;border:1px solid var(--line);border-radius:10px;padding:7px 9px;cursor:pointer;}
+
+/* hero */
+.hero{padding:56px 0 44px;position:relative;overflow:hidden;}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;font-weight:600;color:var(--brand-dark);
+  background:#fff7ed;border:1px solid #fed7aa;
+  padding:5px 12px;border-radius:999px;margin-bottom:20px;
+}
+h1{
+  font-size:clamp(30px,4.4vw,46px);
+  line-height:1.22;
+  font-weight:800;
+  letter-spacing:-.5px;
+}
+.hero-sub{margin-top:18px;font-size:16.5px;color:var(--ink-2);max-width:33em;}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 24px;border-radius:999px;font-weight:600;font-size:15px;
+  transition:.2s;
+}
+.btn-primary{background:var(--navy);color:#fff;}
+.btn-primary:hover{background:#1e293b;}
+.btn-ghost{background:#fff;border:1px solid var(--line);color:var(--ink-2);}
+.btn-ghost:hover{border-color:var(--brand);color:var(--brand-dark);}
+.btn[aria-disabled="true"]{cursor:default;}
+.hero-meta{display:flex;flex-wrap:wrap;gap:20px;margin-top:26px;font-size:13.5px;color:var(--muted);}
+.hero-meta span{display:inline-flex;align-items:center;gap:6px;}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--brand);display:inline-block;}
+
+.hero-visual{
+  background:var(--navy);border-radius:24px;padding:22px;
+  color:#e2e8f0;position:relative;overflow:hidden;
+}
+.hero-visual::after{
+  content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;
+  background:radial-gradient(circle,rgba(249,115,22,.35),transparent 70%);
+}
+.screen{
+  background:#1e293b;border-radius:14px;aspect-ratio:16/9;
+  display:grid;place-items:center;position:relative;border:1px solid #334155;
+}
+.screen svg{width:54px;height:54px;}
+.screen-bar{display:flex;gap:6px;padding-bottom:12px;}
+.screen-bar i{width:9px;height:9px;border-radius:50%;background:#475569;display:block;}
+.screen-bar i:first-child{background:var(--brand);}
+.visual-caption{margin-top:16px;display:flex;justify-content:space-between;font-size:13px;color:#94a3b8;}
+.visual-list{margin-top:14px;display:grid;gap:8px;}
+.visual-list div{
+  background:#1e293b;border:1px solid #334155;border-radius:10px;
+  padding:9px 12px;font-size:13px;display:flex;justify-content:space-between;color:#cbd5e1;
+}
+.visual-list b{color:#fb923c;font-weight:600;}
+
+/* sections */
+section{padding:52px 0;}
+.sec-head{max-width:640px;margin-bottom:30px;}
+.sec-tag{font-size:13px;font-weight:700;color:var(--brand-dark);letter-spacing:1px;margin-bottom:10px;}
+h2{font-size:clamp(22px,2.7vw,28px);font-weight:800;letter-spacing:-.3px;line-height:1.35;}
+.sec-desc{margin-top:12px;color:var(--muted);font-size:15px;}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 22px;transition:.22s;
+}
+.card:hover{border-color:#fdba74;box-shadow:0 12px 28px -18px rgba(15,23,42,.35);transform:translateY(-2px);}
+.card-icon{
+  width:44px;height:44px;border-radius:12px;background:#fff7ed;
+  display:grid;place-items:center;margin-bottom:16px;
+}
+.card h3{font-size:17px;font-weight:700;margin-bottom:8px;}
+.card p{font-size:14.5px;color:var(--muted);}
+.card .link{display:inline-block;margin-top:14px;font-size:14px;font-weight:600;color:var(--brand-dark);}
+
+/* channels */
+.channel-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.channel{
+  background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;
+  display:flex;flex-direction:column;gap:6px;
+}
+.channel span{font-size:12px;color:var(--muted);}
+.channel strong{font-size:15.5px;font-weight:700;}
+.channel em{font-style:normal;font-size:13px;color:var(--brand-dark);font-weight:600;}
+
+/* steps */
+.steps-wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:44px;align-items:start;}
+.steps{display:grid;gap:0;list-style:none;position:relative;}
+.steps li{
+  display:grid;grid-template-columns:44px 1fr;gap:16px;
+  padding:0 0 26px;position:relative;
+}
+.steps li:not(:last-child)::before{
+  content:"";position:absolute;left:21px;top:44px;bottom:0;width:2px;background:var(--line);
+}
+.step-num{
+  width:44px;height:44px;border-radius:50%;background:#fff;border:2px solid var(--brand);
+  color:var(--brand-dark);font-weight:800;display:grid;place-items:center;font-size:15px;
+}
+.steps h3{font-size:16px;font-weight:700;margin-bottom:5px;padding-top:8px;}
+.steps p{font-size:14.5px;color:var(--muted);}
+
+.panel{
+  background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;
+}
+.panel h3{font-size:17px;font-weight:700;margin-bottom:16px;}
+.field{display:grid;gap:8px;margin-bottom:16px;}
+.field label{font-size:13.5px;font-weight:600;color:var(--ink-2);}
+select,input[type="text"]{
+  width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:10px;
+  font-size:14.5px;font-family:inherit;color:var(--ink);background:#fbfbfc;
+}
+select:focus,input:focus{outline:2px solid #fdba74;outline-offset:1px;border-color:var(--brand);}
+.filter-btn{
+  width:100%;padding:12px;border:none;border-radius:10px;background:var(--navy);color:#fff;
+  font-size:15px;font-weight:600;font-family:inherit;cursor:pointer;transition:.2s;
+}
+.filter-btn:hover{background:#1e293b;}
+.result{margin-top:16px;font-size:14px;color:var(--muted);min-height:44px;}
+.result b{color:var(--brand-dark);}
+
+/* faq */
+.faq{display:grid;gap:12px;max-width:900px;}
+details{
+  background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;
+}
+details[open]{border-color:#fdba74;}
+summary{
+  cursor:pointer;font-weight:700;font-size:15.5px;list-style:none;
+  display:flex;justify-content:space-between;gap:16px;align-items:center;
+}
+summary::-webkit-details-marker{display:none;}
+summary::after{content:"+";color:var(--brand-dark);font-size:20px;font-weight:700;line-height:1;}
+details[open] summary::after{content:"−";}
+details p{margin-top:12px;font-size:14.5px;color:var(--muted);}
+
+/* note */
+.notice{
+  background:#fff7ed;border:1px solid #fed7aa;border-radius:16px;
+  padding:22px 24px;font-size:14.5px;color:#9a3412;
+}
+.notice strong{display:block;margin-bottom:6px;font-size:15px;}
+
+/* footer */
+footer.site{background:var(--navy);color:#cbd5e1;padding:44px 0 26px;margin-top:20px;}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;padding-bottom:30px;border-bottom:1px solid #1e293b;}
+.foot-brand{display:flex;align-items:center;gap:10px;margin-bottom:14px;color:#fff;font-weight:800;font-size:16px;}
+.foot-brand .logo-mark{background:#1e293b;}
+footer p{font-size:13.5px;color:#94a3b8;max-width:34em;}
+.foot-col h4{font-size:14px;color:#fff;margin-bottom:12px;font-weight:700;}
+.foot-col a{display:block;font-size:13.5px;color:#94a3b8;padding:3px 0;transition:.2s;}
+.foot-col a:hover{color:#fb923c;}
+.copyright{padding-top:20px;font-size:12.5px;color:#64748b;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;}
+
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:36px;}
+  .hero-visual{order:2;}
+  .cards{grid-template-columns:1fr 1fr;}
+  .channel-grid{grid-template-columns:1fr 1fr;}
+  .steps-wrap{grid-template-columns:1fr;gap:32px;}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:720px){
+  nav.main{
+    display:none;position:absolute;top:100%;left:0;right:0;
+    background:#fff;border-bottom:1px solid var(--line);
+    flex-direction:column;gap:0;padding:8px 4vw 14px;
+  }
+  nav.main.open{display:flex;}
+  nav.main a{padding:11px 4px;border-bottom:1px solid var(--line);}
+  .menu-toggle{display:block;margin-left:auto;}
+  .head-cta{display:none;}
+  .cards{grid-template-columns:1fr;}
+  .hero{padding:36px 0 30px;}
+  section{padding:38px 0;}
+  .hero-meta{gap:14px;}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap head-inner">
+    <a class="logo" href="#top" aria-label="人人视频官网首页">
+      <span class="logo-mark" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="8.5" stroke="#f97316" stroke-width="2"/>
+          <path d="M10 8.5l6 3.5-6 3.5z" fill="#f97316"/>
+        </svg>
+      </span>
+      <span class="logo-text">人人视频官网</span>
+    </a>
+    <button class="menu-toggle" aria-label="展开导航" aria-expanded="false" onclick="var n=document.querySelector('nav.main');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111827" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="main" aria-label="主导航">
+      <a href="#access">访问入口</a>
+      <a href="#channels">频道内容</a>
+      <a href="#guide">使用路径</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <a class="head-cta" href="#access">查看访问方式</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">官方信息页 · 访问与客户端</span>
+        <h1>人人视频官网</h1>
+        <p class="hero-sub">这里是人人视频官网的入口说明页，集中呈现网页版观看入口、官方客户端下载与频道内容结构，帮助你在搜索“人人视频官网”后快速分辨正确地址，少走弯路。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#access">
+            进入访问说明
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#channels">浏览频道内容</a>
+        </div>
+        <div class="hero-meta">
+          <span><i class="dot"></i>网页版与客户端双入口</span>
+          <span><i class="dot"></i>频道按内容类型划分</span>
+          <span><i class="dot"></i>访问路径清晰可查</span>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="screen-bar"><i></i><i></i><i></i></div>
+        <div class="screen">
+          <svg viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="9" stroke="#475569" stroke-width="1.6"/>
+            <path d="M10 8.4l6 3.6-6 3.6z" fill="#f97316"/>
+          </svg>
+        </div>
+        <div class="visual-caption"><span>网页版播放面</span><span>示意</span></div>
+        <div class="visual-list">
+          <div><span>剧集频道</span><b>更新跟进</b></div>
+          <div><span>电影频道</span><b>片单浏览</b></div>
+          <div><span>客户端</span><b>移动观看</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="access">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">访问入口</div>
+        <h2>人人视频官网的两种主要访问方式</h2>
+        <p class="sec-desc">搜索同名关键词时容易遇到仿冒页面，先确认入口类型，再决定用网页还是装客户端，是更稳妥的做法。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>网页版在线观看</h3>
+          <p>无需安装，在浏览器打开人人视频官网即可浏览频道与播放页，适合临时观看或桌面端长时间使用。</p>
+          <a class="link" href="#guide">查看打开步骤 →</a>
+        </article>
+        <article class="card">
+          <div class="card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>
+          </div>
+          <h3>官方客户端下载</h3>
+          <p>移动端观看更省流量与操作步骤，客户端支持账号同步与播放记录延续，适合日常通勤场景。</p>
+          <a class="link" href="#download">了解下载信息 →</a>
+        </article>
+        <article class="card">
+          <div class="card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h3>地址真伪辨别</h3>
+          <p>认准页面结构与官方标识，不轻信来源不明的跳转链接，是使用人人视频官网时最基础的一道防护。</p>
+          <a class="link" href="#faq">阅读辨别要点 →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="channels">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">频道内容</div>
+        <h2>按内容类型组织的频道结构</h2>
+        <p class="sec-desc">人人视频官网以频道为浏览主线，先选类型再选片目，比逐条翻列表更节省时间。</p>
+      </div>
+      <div class="channel-grid">
+        <div class="channel"><span>剧集</span><strong>海外剧集</strong><em>按更新顺序浏览</em></div>
+        <div class="channel"><span>电影</span><strong>电影片库</strong><em>按类型与地区筛选</em></div>
+        <div class="channel"><span>综艺</span><strong>综艺节目</strong><em>按期数查看</em></div>
+        <div class="channel"><span>动漫</span><strong>动画与番剧</strong><em>按季度归类</em></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="guide">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">使用路径</div>
+        <h2>从搜索到播放的三步路径</h2>
+        <p class="sec-desc">对首次访问者而言，最常卡住的不是内容本身，而是入口和播放环境。下面三步覆盖了大部分情况。</p>
+      </div>
+      <div class="steps-wrap">
+        <ol class="steps">
+          <li>
+            <div class="step-num">1</div>
+            <div>
+              <h3>确认进入人人视频官网</h3>
+              <p>优先通过已知官方地址进入，避免点击搜索引擎中带有夸张标题的第三方跳转页。</p>
+            </div>
+          </li>
+          <li>
+            <div class="step-num">2</div>
+            <div>
+              <h3>选择网页版或客户端</h3>
+              <p>桌面端直接用网页版；手机端建议安装官方客户端，减少反复登录与缓冲等待。</p>
+            </div>
+          </li>
+          <li>
+            <div class="step-num">3</div>
+            <div>
+              <h3>按频道定位片目</h3>
+              <p>在人人视频官网的频道页选择剧集或电影，再按更新状态与类型缩小范围，最后进入播放页。</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="panel" id="download">
+          <h3>快速定位频道</h3>
+          <div class="field">
+            <label for="type">内容类型</label>
+            <select id="type">
+              <option value="剧集">剧集</option>
+              <option value="电影">电影</option>
+              <option value="综艺">综艺</option>
+              <option value="动漫">动漫</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="kw">关键词（可留空）</label>
+            <input type="text" id="kw" placeholder="例如：更新、片单">
+          </div>
+          <button class="filter-btn" type="button" onclick="doFilter()">查看匹配频道</button>
+          <p class="result" id="result" aria-live="polite">请选择类型后查看对应频道的浏览方式。</p>
+          <div style="margin-top:18px;padding-top:18px;border-top:1px solid #e5e7eb;">
+            <p style="font-size:13.5px;color:#6b7280;margin-bottom:12px;">客户端安装包将在官方渠道提供，当前页面暂未接入直接下载。</p>
+            <a class="btn btn-primary" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1" style="pointer-events:none;opacity:.62;">下载</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">常见问题</div>
+        <h2>关于人人视频官网的常见疑问</h2>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>人人视频官网和网页版是同一个入口吗？</summary>
+          <p>官网是品牌主站，网页版是其浏览器访问形态。二者指向同一套内容体系，区别主要在于是否需要在本地安装客户端。</p>
+        </details>
+        <details>
+          <summary>不安装客户端能否正常观看？</summary>
+          <p>可以。通过浏览器打开人人视频官网的网页版即可浏览频道与播放，安装客户端更多是为了移动端的操作便利与播放记录同步。</p>
+        </details>
+        <details>
+          <summary>搜索结果里有多个相似站点，如何判断？</summary>
+          <p>建议以页面结构完整、频道分类清晰、无强制跳转下载的站点为准，对要求输入敏感信息的页面保持谨慎，不要在其中填写账号密码。</p>
+        </details>
+        <details>
+          <summary>页面上的下载按钮为什么不可点击？</summary>
+          <p>当前首页尚未接入官方安装包地址，按钮处于占位状态，待官方渠道确认后再替换为真实下载链接。</p>
+        </details>
+      </div>
+      <div class="notice" style="margin-top:26px;">
+        <strong>使用提示</strong>
+        请在网络环境稳定、设备存储充足的情况下使用人人视频官网的客户端；观看时留意流量消耗，移动网络下建议提前缓存。
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <span class="logo-mark" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="8.5" stroke="#f97316" stroke-width="2"/>
+              <path d="M10 8.5l6 3.5-6 3.5z" fill="#f97316"/>
+            </svg>
+          </span>
+          人人视频官网
+        </div>
+        <p>人人视频官网入口说明与频道内容导览，帮助访问者辨认官方地址、选择网页版或客户端，并按内容类型快速定位想看的片目。</p>
+      </div>
+      <div class="foot-col">
+        <h4>页面导航</h4>
+        <a href="#access">访问入口</a>
+        <a href="#channels">频道内容</a>
+        <a href="#guide">使用路径</a>
+        <a href="#faq">常见问题</a>
+      </div>
+      <div class="foot-col">
+        <h4>关注内容</h4>
+        <a href="#channels">剧集频道</a>
+        <a href="#channels">电影片库</a>
+        <a href="#guide">客户端下载</a>
+        <a href="#faq">地址辨别</a>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>人人视频官网 · 入口说明页</span>
+      <span>页面信息以官方公开渠道为准</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function doFilter(){
+  var t=document.getElementById('type').value;
+  var k=document.getElementById('kw').value.trim();
+  var map={
+    '剧集':'剧集频道按更新顺序排列，可在频道页按地区与年份继续缩小范围。',
+    '电影':'电影片库支持按类型与地区筛选，适合先定类型再挑片。',
+    '综艺':'综艺节目按期数组织，可从最新一期向前翻阅。',
+    '动漫':'动画与番剧按季度归类，跨季续作在对应季度下可找到。'
+  };
+  var text=map[t]||'';
+  if(k){text+=' 你输入的关键词“'+k+'”可在频道页搜索框中继续检索。';}
+  document.getElementById('result').innerHTML='<b>'+t+'</b>：'+text;
+}
+</script>
+</body>
+</html>
