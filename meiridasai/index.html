@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日大赛校园大赛-校园大赛每日热点_校园大赛热门动态</title>
+<meta name="description" content="每日大赛校园大赛聚焦校园大赛热点内容，汇集每日大赛校园大赛的热门话题、现场看点与网友讨论，帮助读者快速了解每日大赛校园大赛的最新动向与焦点内容。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b1f3b'/%3E%3Cpath d='M18 22h28v6H18zM18 34h18v6H18z' fill='%23ffc94a'/%3E%3Ccircle cx='48' cy='40' r='7' fill='%23ff6b57'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1b1f3b;
+  --ink-soft:#4a4f6b;
+  --paper:#f7f4ee;
+  --card:#ffffff;
+  --gold:#ffc94a;
+  --coral:#ff6b57;
+  --line:#e3ddd2;
+  --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,92vw);margin:0 auto}
+
+/* 页头 */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(247,244,238,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:20px;padding:14px 0;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-mark{
+  width:44px;height:44px;border-radius:12px;
+  background:var(--ink);display:grid;place-items:center;flex:0 0 auto;
+}
+.brand-mark svg{width:26px;height:26px}
+.brand-text{
+  font-size:17px;font-weight:800;letter-spacing:.5px;color:var(--ink);
+}
+.brand-text small{
+  display:block;font-size:11px;font-weight:500;color:var(--ink-soft);letter-spacing:2px;
+}
+nav.main-nav{display:flex;gap:6px;flex-wrap:wrap}
+nav.main-nav a{
+  font-size:14px;color:var(--ink-soft);padding:7px 12px;border-radius:99px;
+  transition:.2s;
+}
+nav.main-nav a:hover,nav.main-nav a:focus-visible{background:var(--ink);color:#fff}
+
+/* 首屏 */
+.hero{
+  padding:56px 0 48px;
+  position:relative;overflow:hidden;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;
+}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;border:1px solid var(--line);border-radius:99px;
+  font-size:12.5px;font-weight:600;color:var(--ink-soft);
+  padding:6px 14px;margin-bottom:20px;letter-spacing:.3px;
+}
+.hero-tag i{width:8px;height:8px;border-radius:50%;background:var(--coral);display:block}
+h1{
+  font-size:clamp(30px,4.4vw,50px);
+  line-height:1.18;font-weight:900;letter-spacing:-.5px;
+  margin-bottom:18px;
+}
+h1 .hl{
+  background:linear-gradient(transparent 62%,var(--gold) 62%);
+  padding:0 2px;
+}
+.hero-lead{
+  font-size:16px;color:var(--ink-soft);max-width:38em;margin-bottom:26px;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:14.5px;font-weight:700;padding:12px 22px;border-radius:99px;
+  border:1.5px solid transparent;cursor:pointer;transition:.2s;
+}
+.btn-primary{background:var(--ink);color:#fff}
+.btn-primary:hover{background:#2c3160;transform:translateY(-1px)}
+.btn-ghost{background:#fff;border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink)}
+.btn[aria-disabled="true"]{opacity:.85;cursor:default}
+
+/* 首屏视觉 */
+.hero-art{
+  background:var(--ink);border-radius:24px;padding:26px;color:#fff;
+  position:relative;overflow:hidden;
+}
+.hero-art::after{
+  content:"";position:absolute;width:180px;height:180px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,201,74,.35),transparent 70%);
+  right:-50px;top:-50px;
+}
+.art-title{font-size:13px;letter-spacing:2px;color:#b9bdd6;margin-bottom:14px}
+.art-list{list-style:none;display:grid;gap:12px;position:relative;z-index:1}
+.art-list li{
+  display:flex;align-items:center;gap:12px;
+  background:rgba(255,255,255,.07);border-radius:12px;padding:11px 14px;
+  font-size:14px;
+}
+.art-list li span.num{
+  width:24px;height:24px;border-radius:8px;flex:0 0 auto;
+  display:grid;place-items:center;font-size:12px;font-weight:800;
+  background:var(--gold);color:var(--ink);
+}
+.art-list li span.num.c2{background:var(--coral);color:#fff}
+
+/* 通用分区 */
+section{padding:56px 0}
+.section-head{margin-bottom:32px;max-width:46em}
+.eyebrow{
+  font-size:12.5px;font-weight:800;letter-spacing:3px;color:var(--coral);
+  text-transform:uppercase;margin-bottom:10px;
+}
+h2{font-size:clamp(22px,2.6vw,30px);font-weight:900;letter-spacing:-.3px;margin-bottom:12px}
+.section-head p{color:var(--ink-soft);font-size:15px}
+
+/* 焦点卡片区 */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;display:flex;flex-direction:column;gap:12px;
+  transition:.22s;
+}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px -18px rgba(27,31,59,.35)}
+.card-ico{
+  width:42px;height:42px;border-radius:12px;background:#fdf3dc;
+  display:grid;place-items:center;flex:0 0 auto;
+}
+.card-ico svg{width:22px;height:22px}
+.card h3{font-size:17px;font-weight:800;line-height:1.4}
+.card p{font-size:14px;color:var(--ink-soft);flex:1}
+.card .meta{font-size:12.5px;color:#8b8fa8;font-weight:600}
+
+/* 列表区 */
+.split{display:grid;grid-template-columns:1.3fr .7fr;gap:36px;align-items:start}
+.news-list{display:grid;gap:16px}
+.news-item{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px 22px;display:flex;gap:18px;align-items:flex-start;
+}
+.news-item .date{
+  flex:0 0 auto;width:58px;text-align:center;border-right:1px solid var(--line);
+  padding-right:14px;
+}
+.news-item .date b{display:block;font-size:20px;font-weight:900;line-height:1.2}
+.news-item .date span{font-size:11.5px;color:#8b8fa8;letter-spacing:1px}
+.news-item h3{font-size:15.5px;font-weight:800;margin-bottom:6px}
+.news-item p{font-size:13.5px;color:var(--ink-soft)}
+
+.aside-box{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;position:sticky;top:88px;
+}
+.aside-box h3{font-size:15px;font-weight:800;margin-bottom:14px}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:8px}
+.tag-cloud a{
+  font-size:12.5px;padding:6px 12px;border-radius:99px;
+  background:#f3efe6;color:var(--ink-soft);transition:.2s;
+}
+.tag-cloud a:hover{background:var(--ink);color:#fff}
+.aside-note{
+  margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);
+  font-size:13px;color:var(--ink-soft);line-height:1.7;
+}
+
+/* 深度阅读 */
+.reading{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.reading-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.reading-grid article p{font-size:15px;color:var(--ink-soft);margin-bottom:14px}
+.reading-grid article p strong{color:var(--ink)}
+.pull{
+  border-left:4px solid var(--gold);padding:6px 0 6px 18px;
+  font-size:15.5px;color:var(--ink);font-weight:600;margin:20px 0;
+}
+
+/* 操作入口 */
+.cta{
+  background:var(--ink);color:#fff;border-radius:24px;padding:44px;
+  display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;
+  position:relative;overflow:hidden;
+}
+.cta::before{
+  content:"";position:absolute;width:260px;height:260px;border-radius:50%;
+  border:40px solid rgba(255,201,74,.12);right:-80px;bottom:-120px;
+}
+.cta h2{color:#fff;font-size:clamp(20px,2.4vw,26px);margin-bottom:8px}
+.cta p{color:#b9bdd6;font-size:14.5px;max-width:34em}
+.cta .btn-primary{background:var(--gold);color:var(--ink);position:relative;z-index:1}
+.cta .btn-primary:hover{background:#ffd76e}
+
+/* 页尾 */
+footer{
+  background:#fff;border-top:1px solid var(--line);padding:40px 0 30px;margin-top:0;
+}
+.footer-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:26px}
+.footer-brand{max-width:26em}
+.footer-brand p{font-size:13.5px;color:var(--ink-soft);margin-top:10px}
+.footer-nav{display:flex;gap:40px;flex-wrap:wrap}
+.footer-nav div h4{font-size:13px;font-weight:800;margin-bottom:10px;letter-spacing:1px}
+.footer-nav div a{display:block;font-size:13px;color:var(--ink-soft);padding:3px 0;transition:.2s}
+.footer-nav div a:hover{color:var(--coral)}
+.footer-bottom{
+  border-top:1px solid var(--line);padding-top:18px;
+  font-size:12.5px;color:#8b8fa8;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+}
+
+/* 搜索控件 */
+.search-bar{
+  display:flex;gap:10px;margin-bottom:26px;max-width:520px;
+}
+.search-bar input{
+  flex:1;border:1.5px solid var(--line);background:#fff;border-radius:99px;
+  padding:11px 18px;font-size:14px;font-family:inherit;color:var(--ink);outline:none;
+}
+.search-bar input:focus{border-color:var(--ink)}
+.search-bar button{
+  border:none;background:var(--ink);color:#fff;border-radius:99px;
+  padding:0 22px;font-size:14px;font-weight:700;font-family:inherit;cursor:pointer;
+}
+.search-bar button:hover{background:#2c3160}
+.empty-hint{font-size:13.5px;color:#8b8fa8;display:none;padding:6px 2px}
+.empty-hint.show{display:block}
+
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:32px}
+  .cards{grid-template-columns:1fr 1fr}
+  .split{grid-template-columns:1fr}
+  .aside-box{position:static}
+  .reading-grid{grid-template-columns:1fr;gap:24px}
+  .cta{padding:32px 24px}
+}
+@media (max-width:600px){
+  .hero{padding:36px 0 32px}
+  section{padding:40px 0}
+  .cards{grid-template-columns:1fr}
+  .header-inner{padding:10px 0}
+  .brand-text{font-size:15px}
+  nav.main-nav a{padding:5px 9px;font-size:13px}
+  .news-item{gap:12px;padding:16px}
+  .news-item .date{width:46px;padding-right:10px}
+  .footer-nav{gap:26px}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="每日大赛校园大赛 首页">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none">
+          <path d="M14 20h30v7H14z" fill="#ffc94a"/>
+          <path d="M14 33h20v7H14z" fill="#ffffff"/>
+          <circle cx="47" cy="42" r="8" fill="#ff6b57"/>
+        </svg>
+      </span>
+      <span class="brand-text">每日大赛校园大赛<small>CAMPUS DAILY ARENA</small></span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <a href="#focus">今日焦点</a>
+      <a href="#feed">热点速览</a>
+      <a href="#reading">深度观察</a>
+      <a href="#join">参与入口</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="hero-tag"><i></i>校园热点 · 每日更新</span>
+        <h1>每日大赛校园大赛</h1>
+        <p class="hero-lead">这里是每日大赛校园大赛的热点聚合页：把每天在校园里被反复讨论的看点、名场面与网友观点整理在一起，让你打开页面就能掌握每日大赛校园大赛的焦点走向，而不是在零散信息里来回翻找。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#feed">查看今日热点
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#focus">先看焦点卡片</a>
+        </div>
+      </div>
+      <aside class="hero-art" aria-label="今日热榜示意">
+        <p class="art-title">今日 · 校园大赛热榜</p>
+        <ul class="art-list">
+          <li><span class="num">1</span>谁是本场最出圈的临场反应</li>
+          <li><span class="num c2">2</span>台下观众席的金句被反复转发</li>
+          <li><span class="num">3</span>往届名场面被重新翻出来讨论</li>
+          <li><span class="num c2">4</span>校园大赛的评分细节成为新话题</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 今日焦点 -->
+  <section id="focus">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Today's Focus</p>
+        <h2>每日大赛校园大赛 · 今日焦点</h2>
+        <p>焦点卡片按话题类型分组，每张卡片只负责一件事：告诉你今天这件事为什么被讨论，以及讨论集中在哪个细节上。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <span class="card-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1b1f3b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-6 4 4 5-7 4 5"/></svg>
+          </span>
+          <h3>现场反应成为第一讨论点</h3>
+          <p>每日大赛校园大赛里最容易被截取传播的，往往不是结果本身，而是台上台下的即时反应。今天的讨论集中在一段临场应对上，网友围绕“稳”和“险”两种判断各执一词。</p>
+          <span class="meta">话题热度 · 高</span>
+        </article>
+        <article class="card">
+          <span class="card-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1b1f3b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.6 6.1.8-4.5 4.3 1.1 6-5.3-3-5.3 3 1.1-6L3.3 9.4l6.1-.8z"/></svg>
+          </span>
+          <h3>评分细节被逐条拆解</h3>
+          <p>围绕每日大赛校园大赛的评分口径，出现了不少逐帧复盘。讨论的价值不在于争出高下，而在于让更多第一次关注校园大赛的人看懂规则是怎么落到具体环节上的。</p>
+          <span class="meta">讨论深度 · 中高</span>
+        </article>
+        <article class="card">
+          <span class="card-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1b1f3b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h10M4 18h13"/></svg>
+          </span>
+          <h3>往届名场面重新回流</h3>
+          <p>新话题带火旧片段，是每日大赛校园大赛的常见节奏。今天多条旧内容被重新转发，讨论角度从“好笑”转向“当时为什么这么处理”，形成一轮新的解读。</p>
+          <span class="meta">回流热度 · 中</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热点速览 -->
+  <section id="feed">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Hot Feed</p>
+        <h2>热点速览：今天大家都在聊什么</h2>
+        <p>按时间顺序记录每日大赛校园大赛的讨论节点，方便你判断话题是刚起、正热，还是已经开始降温。</p>
+      </div>
+
+      <div class="split">
+        <div>
+          <div class="search-bar" role="search">
+            <input id="feedSearch" type="search" placeholder="筛选关键词，如：评分、名场面、观众席" aria-label="筛选热点关键词">
+            <button type="button" id="feedSearchBtn">筛选</button>
+          </div>
+          <p class="empty-hint" id="feedEmpty">没有匹配的条目，换个关键词试试。</p>
+
+          <div class="news-list" id="feedList">
+            <article class="news-item">
+              <div class="date"><b>01</b><span>焦点</span></div>
+              <div>
+                <h3>一段临场应对被反复回放</h3>
+                <p>每日大赛校园大赛今天的讨论起点，是一段没有排练痕迹的现场应对。有人认为这是经验积累的结果，也有人觉得运气占了上风，两种看法在评论区持续交锋。</p>
+              </div>
+            </article>
+            <article class="news-item">
+              <div class="date"><b>02</b><span>规则</span></div>
+              <div>
+                <h3>评分口径成为新的科普话题</h3>
+                <p>不少新观众第一次接触校园大赛，围绕评分维度提出疑问。老观众用往届案例逐条解释，这类“补课式”讨论让每日大赛校园大赛的规则被更多人理解。</p>
+              </div>
+            </article>
+            <article class="news-item">
+              <div class="date"><b>03</b><span>人物</span></div>
+              <div>
+                <h3>台下观众的一句话成了金句</h3>
+                <p>讨论热度并不总在台上。今天被转发最多的一句评论来自观众席，简短但精准，随后被大量引用，也让每日大赛校园大赛的现场氛围成为话题的一部分。</p>
+              </div>
+            </article>
+            <article class="news-item">
+              <div class="date"><b>04</b><span>回顾</span></div>
+              <div>
+                <h3>往届片段被重新剪辑对照</h3>
+                <p>有网友把今年的处理方式和往届同类情形剪在一起对照，讨论重点从“谁更好”转向“处理思路的差异”，这也让每日大赛校园大赛的讨论多了一层观察角度。</p>
+              </div>
+            </article>
+            <article class="news-item">
+              <div class="date"><b>05</b><span>氛围</span></div>
+              <div>
+                <h3>现场秩序与节奏获得好评</h3>
+                <p>除了内容本身，现场节奏的推进方式也收到正面反馈。对每日大赛校园大赛来说，稳定的节奏意味着讨论能集中在内容上，而不是被流程问题分散注意力。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <aside class="aside-box" aria-label="相关话题">
+          <h3>相关话题</h3>
+          <div class="tag-cloud">
+            <a href="#feed">校园大赛评分</a>
+            <a href="#feed">名场面回放</a>
+            <a href="#feed">观众席金句</a>
+            <a href="#feed">临场反应</a>
+            <a href="#reading">往届对照</a>
+            <a href="#reading">现场节奏</a>
+            <a href="#join">参与讨论</a>
+          </div>
+          <p class="aside-note">话题标签对应本页已有的内容分区，点击后回到相应位置继续阅读，不跳转到外部页面。</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 深度观察 -->
+  <section class="reading" id="reading">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Deep Reading</p>
+        <h2>深度观察：每日大赛校园大赛为什么值得持续关注</h2>
+        <p>热点会退潮，但观察方法可以留下。这一部分把零散讨论收拢成两条可复用的阅读线索。</p>
+      </div>
+      <div class="reading-grid">
+        <article>
+          <p><strong>线索一：把讨论对象和讨论情绪分开。</strong>每日大赛校园大赛的内容传播速度快，同一段画面在不同人眼里会得出不同结论。阅读时应先确认讨论的是哪个环节、哪条规则，再去判断情绪是否成立，这样不容易被单条评论带偏。</p>
+          <p>从今天的条目看，争议集中在临场应对与评分口径两处，二者其实属于不同层面：前者关乎个人判断，后者关乎规则执行。分开看，讨论会清楚很多。</p>
+          <div class="pull">热点是入口，规则与现场才是每日大赛校园大赛长期可读的部分。</div>
+          <p>往届片段回流也印证了这一点：真正被反复拿出来说的，往往是处理思路的差异，而非一时的输赢结果。</p>
+        </article>
+        <article>
+          <p><strong>线索二：用时间线判断热度阶段。</strong>每日大赛校园大赛的讨论通常经历“起—热—对照—沉淀”四个阶段。刚起时信息零碎，正热时观点密集，对照阶段会出现大量往届内容，沉淀阶段则留下少量被公认的细节。</p>
+          <p>今天的内容大致处在“正热”向“对照”过渡的位置，这也是为什么旧片段会集中出现。读者若想跟上节奏，关注对照阶段往往比追逐第一条消息更有收获。</p>
+          <p>需要说明的是，以上是对公开讨论节奏的观察，不涉及对任何具体个人或结果的评价。每日大赛校园大赛的看点在于讨论本身如何展开，本页只做整理与呈现。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 参与入口 -->
+  <section id="join">
+    <div class="wrap">
+      <div class="cta">
+        <div>
+          <h2>把今天的看点收进你的关注清单</h2>
+          <p>每日大赛校园大赛的热点每天都在变。你可以先浏览本页的热点速览，再回到焦点卡片确认细节；需要留存时，使用下方入口获取整理内容。</p>
+        </div>
+        <a class="btn btn-primary" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1" style="pointer-events:none">下载</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none">
+              <path d="M14 20h30v7H14z" fill="#ffc94a"/>
+              <path d="M14 33h20v7H14z" fill="#ffffff"/>
+              <circle cx="47" cy="42" r="8" fill="#ff6b57"/>
+            </svg>
+          </span>
+          <span class="brand-text">每日大赛校园大赛<small>CAMPUS DAILY ARENA</small></span>
+        </div>
+        <p>每日大赛校园大赛热点聚合页，整理每日大赛校园大赛的焦点话题、现场看点与讨论走向，内容以公开讨论为基础进行归纳呈现。</p>
+      </div>
+      <nav class="footer-nav" aria-label="页尾导航">
+        <div>
+          <h4>内容</h4>
+          <a href="#focus">今日焦点</a>
+          <a href="#feed">热点速览</a>
+          <a href="#reading">深度观察</a>
+        </div>
+        <div>
+          <h4>话题</h4>
+          <a href="#feed">校园大赛评分</a>
+          <a href="#feed">名场面回放</a>
+          <a href="#reading">往届对照</a>
+        </div>
+        <div>
+          <h4>入口</h4>
+          <a href="#join">参与入口</a>
+          <a href="#top">回到顶部</a>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>每日大赛校园大赛 · 校园热点内容聚合</span>
+      <span>页面内容为公开讨论的整理呈现，不构成对任何个人或结果的评价</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var input = document.getElementById('feedSearch');
+  var btn = document.getElementById('feedSearchBtn');
+  var list = document.getElementById('feedList');
+  var empty = document.getElementById('feedEmpty');
+  if(!input || !list) return;
+  var items = Array.prototype.slice.call(list.querySelectorAll('.news-item'));
+
+  function filter(){
+    var q = (input.value || '').trim().toLowerCase();
+    var shown = 0;
+    items.forEach(function(item){
+      var text = item.textContent.toLowerCase();
+      var hit = !q || text.indexOf(q) > -1;
+      item.style.display = hit ? '' : 'none';
+      if(hit) shown++;
+    });
+    empty.classList.toggle('show', shown === 0);
+  }
+
+  input.addEventListener('input', filter);
+  btn.addEventListener('click', filter);
+  input.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); filter(); }
+  });
+})();
+</script>
+
+</body>
+</html>
